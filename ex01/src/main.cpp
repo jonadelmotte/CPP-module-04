@@ -5,58 +5,58 @@
 
 #define TEST(type) std::cout << "\n/* * * * * * * * * * * * * * " type " TEST * * * * * * * * * * * * * * * */\n\n\n";
 
-// void    Animal_test()
-// {
-//     TEST("ANIMAL");
+void    Animal_test()
+{
+    TEST("ANIMAL");
 
-//     Animal test;
+    Animal test;
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     test.makeSound();
+    test.makeSound();
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     return ;
-// }
+    return ;
+}
 
-// void    Cat_test()
-// {
-//     TEST("CAT");
+void    Cat_test()
+{
+    TEST("CAT");
 
-//     Cat test;
+    Cat test;
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     test.makeSound();
+    test.makeSound();
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     return ;
-// }
+    return ;
+}
 
-// void    Dog_test()
-// {
-//     TEST("ANIMAL");
+void    Dog_test()
+{
+    TEST("ANIMAL");
 
-//     Dog test;
+    Dog test;
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     test.makeSound();
+    test.makeSound();
 
-//     std::cout << "\n\n";
+    std::cout << "\n\n";
 
-//     return ;
-// }
+    return ;
+}
 
 
-// int main()
-// {
-//     Animal_test();
-//     Cat_test();
-//     Dog_test();
-// }
+int main()
+{
+    Animal_test();
+    Cat_test();
+    Dog_test();
+}
 
 // int main()
 // {
@@ -78,22 +78,22 @@
 //     return 0;
 // }
 
-int main()
-{
-    const WrongAnimal* meta = new WrongAnimal();
-    const Animal* j = new Dog();
-    const WrongAnimal* i = new WrongCat();
+// int main()
+// {
+//     const WrongAnimal* meta = new WrongAnimal();
+//     const Animal* j = new Dog();
+//     const WrongAnimal* i = new WrongCat();
 
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
+//     std::cout << j->getType() << " " << std::endl;
+//     std::cout << i->getType() << " " << std::endl;
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
+//     i->makeSound(); //will output the cat sound!
+//     j->makeSound();
+//     meta->makeSound();
 
-    delete(meta);
-    delete(i);
-    delete(j);
+//     delete(meta);
+//     delete(i);
+//     delete(j);
 
-    return 0;
-}
+//     return 0;
+// }
