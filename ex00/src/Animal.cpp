@@ -8,7 +8,7 @@ Animal::Animal() : type("unknown")
 
 Animal::Animal(const std::string &new_type) : type(new_type)
 {
-    std::cout << "We just found out that an new" << type << " was born\n";
+    std::cout << "We just found out that an new " << type << " was born\n";
 }
 
 Animal::~Animal()
@@ -16,7 +16,19 @@ Animal::~Animal()
     std::cout << "by by little " << type << " you were quite nice :)\n";
 }
 
+Animal  &Animal::operator=(const Animal &src)
+{
+    if (this != &src)
+        this->type = src.type;
+    return (*this);
+}
+
 void    Animal::makeSound() const
 {
-    std::cout << type << " : ' Š¶ªŒ×Ðþ ' \n";
+    std::cout << type << " : ' Š¶ªŒ×Ðþ ! 👾 ! '\n";
+}
+
+std::string Animal::getType() const
+{
+    return type;
 }

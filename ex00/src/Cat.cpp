@@ -11,6 +11,13 @@ Cat::~Cat()
     std::cout << "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO the cat has died !!!\n";
 }
 
+Cat &Cat::operator=(const Cat &src)
+{
+    if (this != &src)
+        this->type = src.getType();
+    return (*this);
+}
+
 void    Cat::makeSound() const
 {
     std::cout << type << " : ' Meow ! 🐱 ! '\n";

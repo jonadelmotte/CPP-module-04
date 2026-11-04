@@ -17,9 +17,13 @@ protected:
 public:
     Animal();
     Animal(const std::string &new_type);
-    ~Animal();
+    virtual ~Animal();
 
-    void    makeSound() const;
+    virtual void    makeSound() const;
+
+    virtual Animal  &operator=(const Animal &src);
+
+    std::string getType() const;
 };
 
 #endif

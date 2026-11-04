@@ -1,6 +1,6 @@
 NAME = Animal
 
-FILES = main Animal Dog Cat \
+FILES = main Animal Dog Cat WrongAnimal WrongCat \
 
 SRC_DIR = src/
 OBJ_DIR = obj/
