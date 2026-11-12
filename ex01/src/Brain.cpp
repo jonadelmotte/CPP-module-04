@@ -19,7 +19,7 @@ void    Brain::set_idea(const std::string &idea)
         i++;
     if (i <= 99)
     {
-        this->ideas[i] = static_cast<std::string>(idea);
+        this->ideas[i] = idea;
         return ;
     }
     std::cout << "This brain is already way to full\n";
@@ -32,15 +32,18 @@ std::string Brain::get_idea(const int index) const
 
 Brain &Brain::operator=(const Brain &src)
 {
+    std::cout << "lol hahah hih\n";
     if (this != &src)
     {
         int i = 0;
         while (!src.get_idea(i).empty())
         {
-            this->ideas[i] = src.get_idea(i);
+            if (!this->ideas[i].empty())
+                this->rm_idea(i);
+            this->set_idea(src.get_idea(i));
             i++;
         }
-        while (!this->ideas[i].empty())
+        for ( ;this->ideas[i].empty(); i++)
             this->ideas[i].clear();
     }
     return (*this);

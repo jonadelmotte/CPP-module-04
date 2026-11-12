@@ -6,6 +6,11 @@ Animal::Animal() : type("unknown")
     std::cout << "An animal was just born, nobody seems to know what animal it is..\n";
 }
 
+Animal::Animal(const Animal &Animal) : type(Animal.getType())
+{
+    std::cout << "We just found out that an new " << type << " was born\n";
+}
+
 Animal::Animal(const std::string &new_type) : type(new_type)
 {
     std::cout << "We just found out that an new " << type << " was born\n";
@@ -19,7 +24,7 @@ Animal::~Animal()
 Animal  &Animal::operator=(const Animal &src)
 {
     if (this != &src)
-        this->type = src.type;
+        this->setType(src.getType());
     return (*this);
 }
 
@@ -31,4 +36,9 @@ void    Animal::makeSound() const
 std::string Animal::getType() const
 {
     return type;
+}
+
+void    Animal::setType(const std::string &src)
+{
+    type = src;
 }

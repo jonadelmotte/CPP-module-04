@@ -15,6 +15,7 @@ protected:
     std::string type;
 public:
     Animal();
+    Animal(const Animal &Animal);
     Animal(const std::string &new_type);
     virtual ~Animal();
 
@@ -23,6 +24,7 @@ public:
     virtual Animal  &operator=(const Animal &src);
 
     std::string getType() const;
+    void setType(const std::string &src);
 };
 
 #endif

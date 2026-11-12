@@ -6,6 +6,11 @@ WrongAnimal::WrongAnimal() : type("unknown")
     std::cout << "An WrongAnimal was just born, nobody seems to know what WrongAnimal it is..\n";
 }
 
+WrongAnimal::WrongAnimal(const WrongAnimal &WrongAnimal) : type(WrongAnimal.getType())
+{
+    std::cout << "We just found out that an new " << type << " was born\n";
+}
+
 WrongAnimal::WrongAnimal(const std::string &new_type) : type(new_type)
 {
     std::cout << "We just found out that an new " << type << " was born\n";

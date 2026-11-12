@@ -56,6 +56,7 @@ int main()
     Animal_test();
     Cat_test();
     Dog_test();
+    return 0;
 }
 
 // int main()

@@ -17,7 +17,7 @@ Dog &Dog::operator=(const Dog &src)
 {
     if (this != &src)
     {
-        this->type = src.getType();
+        this->setType(src.getType());
         this->_Brain = src.getBrain();
     }
     return (*this);

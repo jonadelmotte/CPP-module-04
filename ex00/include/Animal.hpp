@@ -16,6 +16,7 @@ protected:
     std::string type;
 public:
     Animal();
+    Animal(const Animal &Animal);
     Animal(const std::string &new_type);
     virtual ~Animal();
 
