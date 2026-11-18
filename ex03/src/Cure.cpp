@@ -10,11 +10,10 @@ Cure *Cure::clone() const
 {
     Cure *clone;
 
-    clone->seType(this->type_);
     return (clone);
 }
 
 void    Cure::use(ICharacter &target)
 {
-    std::cout << "* heals " << "<name>" << "’s wounds *\n";
+    std::cout << "* heals " << target.getName() << "’s wounds *\n";
 }

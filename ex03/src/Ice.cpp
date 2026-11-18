@@ -10,11 +10,10 @@ Ice *Ice::clone() const
 {
     Ice *clone;
 
-    clone->seType(this->type_);
     return (clone);
 }
 
 void    Ice::use(ICharacter &target)
 {
-    std::cout << "* shoots an ice bolt at " << "<name>" << " *\n";
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }

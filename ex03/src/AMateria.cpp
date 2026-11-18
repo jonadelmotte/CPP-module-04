@@ -39,16 +39,3 @@ void    AMateria::seType(const std::string &src)
 {
     type_ = src;
 }
-
-AMateria    *AMateria::clone() const
-{
-    AMateria *clone;
-
-    clone->seType(this->type_);
-    return (clone);
-}
-
-void    AMateria::use(ICharacter &target)
-{
-    std::cout << "[ WARNING ]\nThis is not normal behaviour\nThere is no spell\n";
-}
