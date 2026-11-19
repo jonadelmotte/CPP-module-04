@@ -1,6 +1,6 @@
 NAME = Interface
 
-FILES =  \
+FILES =  main AMateria Character Cure Ice Icharacter IMateriaSource MateriaSource \
 
 SRC_DIR = src/
 OBJ_DIR = obj/

@@ -8,7 +8,6 @@ class Character : public ICharacter
     private :
         std::string name_;
         AMateria *slots_[4];
-
     public :
         Character();
         Character(const Character &src);

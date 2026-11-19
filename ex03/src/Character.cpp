@@ -33,6 +33,7 @@ Character &Character::operator=(const Character &src) {
                 slots_[i] = src.slots_[i];
         }
     }
+    return *this;
 }
 
 const std::string &Character::getName() const {

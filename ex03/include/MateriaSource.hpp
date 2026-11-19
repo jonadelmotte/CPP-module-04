@@ -6,7 +6,7 @@
 class MateriaSource : public IMateriaSource
 {
     private :
-        //ici mettre un container hihi gaga gogo
+        AMateria    *spellBook_[4];
     public :
         MateriaSource();
         MateriaSource(const MateriaSource &src);
@@ -15,8 +15,9 @@ class MateriaSource : public IMateriaSource
 
         MateriaSource   &operator=(const MateriaSource &src);
 
-        void    learnMateria(AMateria*);
+        void        learnMateria(AMateria *Materia);
         AMateria    *createMateria(std::string const &type);
-}
+        int        isKnownMateria(std::string const &type);
+} ;
 
 #endif

@@ -1,8 +1,9 @@
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include <string>
-#include "AMateria.hpp"
+# include <string>
+
+class AMateria;
 
 class ICharacter
 {
@@ -11,10 +12,10 @@ class ICharacter
         ICharacter(const ICharacter &src);
 
         ICharacter &operator=(const ICharacter &src);
-    public:
 
-        // virtual ~ICharacter() {};
-        virtual ~ICharacter() = default;
+    public:
+        virtual ~ICharacter() {};
+        // virtual ~ICharacter() = default;
 
         virtual const std::string &getName() const = 0;
         virtual void equipe(AMateria *m) = 0;
