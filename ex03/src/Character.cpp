@@ -1,10 +1,10 @@
 #include "../include/Character.hpp"
 #include <iostream>
 
-Character::Character() : name_("DEFAULT_NAME"), slots_() {
+Character::Character() : ICharacter(), name_("DEFAULT_NAME"), slots_() {
 }
 
-Character::Character(const Character &src) : name_(src.getName()), slots_() {
+Character::Character(const Character &src) : ICharacter(src), name_(src.getName()), slots_() {
     for (int i = 0; i < 4; i++)
     {
         if (src.slots_[i])
@@ -12,7 +12,7 @@ Character::Character(const Character &src) : name_(src.getName()), slots_() {
     }
 }
 
-Character::Character(const std::string &name) : name_(name), slots_() {
+Character::Character(const std::string &name) : ICharacter(), name_(name), slots_() {
 }
 
 Character::~Character() {
@@ -48,9 +48,8 @@ void    Character::equipe(AMateria *m) {
             i++;
         if (i < 4)
             slots_[i] = m;
-        else
-            ;
-            // std::cout << "Inventory is full\n";
+        // else
+        //     std::cout << "Inventory is full\n";
     }
 }
 
@@ -63,6 +62,6 @@ void    Character::unequip(int idx) {
 }
 
 void    Character::use(int idx, ICharacter &target) {
-    if (idx < 4 && idx > -1 && slots_[idx])
+    if (idx < 4 && idx > -1 && !slots_[idx]->geType().empty())
         slots_[idx]->use(target);
 }

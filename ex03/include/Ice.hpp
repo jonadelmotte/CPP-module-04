@@ -2,6 +2,7 @@
 # define ICE_HPP
 
 #include "AMateria.hpp"
+#include "Character.hpp"
 
 class Ice : public AMateria
 {
@@ -9,6 +10,10 @@ class Ice : public AMateria
 
     public :
         Ice();
+        Ice(const Ice &other);
+        ~Ice();
+
+        Ice    &operator=(const Ice &other);
 
         Ice *clone() const;
         void use(ICharacter &target);

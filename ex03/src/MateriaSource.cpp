@@ -1,9 +1,11 @@
 #include "../include/MateriaSource.hpp"
+#include <iostream>
 
-MateriaSource::MateriaSource() : spellBook_() {
+MateriaSource::MateriaSource() : IMateriaSource(), spellBook_() {
+    std::cout << "MateriaSource constructor called\n";
 }
 
-MateriaSource::MateriaSource(const MateriaSource &src) : spellBook_() {
+MateriaSource::MateriaSource(const MateriaSource &src) : IMateriaSource(), spellBook_() {
     for (int i = 0; i < 4; i++)
     {
         if (src.spellBook_[i])
@@ -41,13 +43,13 @@ int    MateriaSource::isKnownMateria(std::string const &type) {
 }
 
 void    MateriaSource::learnMateria(AMateria *Materia) {
+        std::cout << "learnMateria (frome MateriaSource) called\n";
         int i = 0;
         while (i < 4 && spellBook_[i]->geType().empty())
             i++;
         if (Materia && i < 4 && !isKnownMateria(Materia->geType()))
             spellBook_[i] = Materia;
-        else
-            ;
+        // else
             // std::cout << "Inventory is full\n";
 }
 

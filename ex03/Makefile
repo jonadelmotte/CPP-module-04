@@ -1,6 +1,6 @@
 NAME = Interface
 
-FILES =  main AMateria Character Cure Ice Icharacter IMateriaSource MateriaSource \
+FILES =  main AMateria Character Cure Ice ICharacter IMateriaSource MateriaSource \
 
 SRC_DIR = src/
 OBJ_DIR = obj/
@@ -30,11 +30,11 @@ vpath %.cpp $(SRC_DIR)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CCMAC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
+	@$(CC) $(FLAGS) $(OBJ) -g3 -o $(NAME)
 	@echo -e "$(GREEN)$(NAME) compiled !!$(RESET)"
 
 $(OBJ_DIR)%.o: %.cpp $(INCLUDE) Makefile | $(OBJF)
-	@$(CCMAC) $(FLAGS) -c -g3 $< -o $@
+	@$(CC) $(FLAGS) -c -g3 $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

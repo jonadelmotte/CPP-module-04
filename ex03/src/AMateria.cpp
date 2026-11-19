@@ -39,3 +39,8 @@ void    AMateria::seType(const std::string &src)
 {
     type_ = src;
 }
+
+void   AMateria::use(ICharacter &target)
+{
+    (void)target;
+}
