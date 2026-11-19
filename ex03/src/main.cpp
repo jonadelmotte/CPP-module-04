@@ -10,7 +10,6 @@ int main()
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
 
-    std::cout << "lol\n";
     ICharacter* me = new Character("me");
 
     AMateria* tmp;
